@@ -1,6 +1,6 @@
 <resources>
     <!-- App -->
-    <string name="app_name">Popular Movies App</string>
+    <string name="app_name">Movies App</string>
 
     <!-- Actions (menu items, buttons, etc.) and common strings -->
     <string name="action_settings">Settings</string>

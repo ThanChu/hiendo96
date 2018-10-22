@@ -48,21 +48,27 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
 
     @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
+
     @BindView(R.id.navigation_view)
     NavigationView navigationView;
+
     @BindView(R.id.coordinator_layout)
     CoordinatorLayout coordinatorLayout;
+
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+
     @Nullable
     @BindView(R.id.movie_detail_container)
     ScrollView movieDetailContainer;
+
     @Nullable
     @BindView(R.id.fab)
     FloatingActionButton fab;
 
     @Inject
     SortHelper sortHelper;
+
     @Inject
     FavoritesService favoritesService;
 

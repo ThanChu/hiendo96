@@ -138,6 +138,7 @@ ext {
     jUnitVersion = "4.12"
     mockitoVersion = "1.10.19"
     testingSupportLibraryVersion = "0.5"
+    exoPlayerVersion = "2.6.1"
 }
 
 dependencies {
@@ -157,6 +158,11 @@ dependencies {
 
     implementation "io.reactivex:rxjava:${rxJavaVersion}"
     implementation "io.reactivex:rxandroid:${rxAndroidVersion}"
+
+    implementation "com.google.android.exoplayer:exoplayer:${exoPlayerVersion}"
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.X.X'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.X.X'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.X.X'
 
     implementation "com.trello:rxlifecycle:${rxLifecycleVersion}"
     implementation "com.trello:rxlifecycle-android:${rxLifecycleVersion}"
