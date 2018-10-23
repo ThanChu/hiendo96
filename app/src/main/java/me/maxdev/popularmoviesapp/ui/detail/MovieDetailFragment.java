@@ -30,6 +30,7 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import me.maxdev.popularmoviesapp.PopularMoviesApp;
 import me.maxdev.popularmoviesapp.R;
 import me.maxdev.popularmoviesapp.api.MovieReviewsResponse;
@@ -39,6 +40,7 @@ import me.maxdev.popularmoviesapp.data.Movie;
 import me.maxdev.popularmoviesapp.data.MovieReview;
 import me.maxdev.popularmoviesapp.data.MovieVideo;
 import me.maxdev.popularmoviesapp.ui.ItemOffsetDecoration;
+import me.maxdev.popularmoviesapp.ui.MovieDetailPlayerActivity;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -59,26 +61,34 @@ public class MovieDetailFragment extends RxFragment {
 
     @BindView(R.id.image_movie_detail_poster)
     ImageView movieImagePoster;
+
     @BindView(R.id.text_movie_original_title)
     TextView movieOriginalTitle;
+
     @BindView(R.id.text_movie_user_rating)
     TextView movieUserRating;
+
     @BindView(R.id.text_movie_release_date)
     TextView movieReleaseDate;
+
     @BindView(R.id.text_movie_overview)
     TextView movieOverview;
+
     @BindView(R.id.card_movie_detail)
     CardView cardMovieDetail;
+
     @BindView(R.id.card_movie_overview)
     CardView cardMovieOverview;
 
     @BindView(R.id.card_movie_videos)
     CardView cardMovieVideos;
+
     @BindView(R.id.movie_videos)
     RecyclerView movieVideos;
 
     @BindView(R.id.card_movie_reviews)
     CardView cardMovieReviews;
+
     @BindView(R.id.movie_reviews)
     RecyclerView movieReviews;
 
@@ -122,6 +132,11 @@ public class MovieDetailFragment extends RxFragment {
         return rootView;
     }
 
+    @OnClick(R.id.btn_play_movie)
+    public void playMovie(){
+        Intent intent = new Intent(getContext(), MovieDetailPlayerActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public void onResume() {

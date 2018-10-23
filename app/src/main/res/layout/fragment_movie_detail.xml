@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -28,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/content_description_movie_poster"
-                tools:src="@mipmap/ic_launcher"/>
+                tools:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:id="@+id/text_movie_original_title"
@@ -46,20 +45,35 @@
                 android:paddingRight="8dp"
                 android:paddingStart="8dp"
                 android:paddingTop="16dp"
-                tools:text="Original movie title"/>
+                tools:text="Original movie title" />
 
-            <TextView
-                android:id="@+id/text_movie_user_rating"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:gravity="center|left"
                 android:layout_margin="@dimen/spacing_medium"
                 android:layout_toEndOf="@+id/image_movie_detail_poster"
                 android:layout_toRightOf="@+id/image_movie_detail_poster"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:textSize="42sp"
-                tools:text="10.0"/>
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_movie_user_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:textSize="42sp"
+                    tools:text="10.0" />
+
+                <Button
+                    android:id="@+id/btn_play_movie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xem phim"
+                    android:textAllCaps="false" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/text_movie_release_date"
@@ -73,7 +87,7 @@
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
                 android:paddingStart="8dp"
-                tools:text="Release date: 08.10.2015"/>
+                tools:text="Release date: 08.10.2015" />
 
         </RelativeLayout>
 
@@ -100,7 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/movie_detail_overview_title"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_movie_overview"
@@ -108,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text_movie_overview_title"
                 android:paddingTop="@dimen/spacing_medium"
-                tools:text="A plot synopsis (called overview in the api)"/>
+                tools:text="A plot synopsis (called overview in the api)" />
 
         </RelativeLayout>
 
@@ -136,7 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/movie_detail_videos_title"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/movie_videos"
@@ -146,7 +160,7 @@
                 android:background="@color/white"
                 android:orientation="horizontal"
                 android:paddingTop="@dimen/spacing_medium"
-                app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
         </RelativeLayout>
 
@@ -173,14 +187,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/movie_detail_reviews_title"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/movie_reviews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_reviews_title"
-                android:paddingTop="@dimen/spacing_medium"/>
+                android:paddingTop="@dimen/spacing_medium" />
 
         </RelativeLayout>
 
