@@ -70,6 +70,7 @@ public class MovieDetailPlayerActivity extends AppCompatActivity {
 
         // Prepare the player with the source.
         player.prepare(videoSource);
+        player.setPlayWhenReady(true);
 
     }
 
