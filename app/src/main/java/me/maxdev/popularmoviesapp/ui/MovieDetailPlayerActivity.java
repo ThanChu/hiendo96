@@ -4,6 +4,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import com.google.android.exoplayer2.ExoPlayerFactory;
 import com.google.android.exoplayer2.SimpleExoPlayer;
@@ -23,16 +26,31 @@ import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
 
 import me.maxdev.popularmoviesapp.R;
+import me.maxdev.popularmoviesapp.adapter.MovieRelatedAdapter;
 
 public class MovieDetailPlayerActivity extends AppCompatActivity {
 
     private SimpleExoPlayer player;
+    private RecyclerView recyclerView;
+    private MovieRelatedAdapter adapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_player);
 
+        initViews();
+
+    }
+
+    private void initViews() {
+        recyclerView = (RecyclerView) findViewById(R.id.rcl_movie_related);
+
+        adapter = new MovieRelatedAdapter();
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(adapter);
     }
 
     @Override
