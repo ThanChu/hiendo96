@@ -15,6 +15,11 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
+    <style name="AppTheme2" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
     <style name="AppTheme.NoActionBar2">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

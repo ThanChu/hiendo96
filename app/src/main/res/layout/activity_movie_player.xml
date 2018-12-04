@@ -5,13 +5,22 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     android:fitsSystemWindows="true"
+    android:keepScreenOn="true"
     android:orientation="vertical">
 
     <com.google.android.exoplayer2.ui.SimpleExoPlayerView
         android:id="@+id/exoplayer"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="3"
         app:resize_mode="fill" />
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,16 +30,16 @@
 
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/vote_bad"
-        android:orientation="vertical">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rcl_movie_related"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:background="@color/vote_bad"
+            android:orientation="vertical">
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcl_movie_related"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

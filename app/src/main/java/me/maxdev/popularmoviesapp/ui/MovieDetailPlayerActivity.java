@@ -1,5 +1,6 @@
 package me.maxdev.popularmoviesapp.ui;
 
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.google.android.exoplayer2.ExoPlayerFactory;
 import com.google.android.exoplayer2.SimpleExoPlayer;
@@ -33,6 +37,7 @@ public class MovieDetailPlayerActivity extends AppCompatActivity {
     private SimpleExoPlayer player;
     private RecyclerView recyclerView;
     private MovieRelatedAdapter adapter;
+    private ViewGroup layoutContent;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,6 +50,7 @@ public class MovieDetailPlayerActivity extends AppCompatActivity {
 
     private void initViews() {
         recyclerView = (RecyclerView) findViewById(R.id.rcl_movie_related);
+        layoutContent = (ViewGroup) findViewById(R.id.layout_content);
 
         adapter = new MovieRelatedAdapter();
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
@@ -57,6 +63,25 @@ public class MovieDetailPlayerActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         initializePlayer();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        int orientation = newConfig.orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT){
+
+            layoutContent.setVisibility(View.VISIBLE);
+        }
+        else if (orientation == Configuration.ORIENTATION_LANDSCAPE){
+            layoutContent.setVisibility(View.GONE);
+        }
+        else{
+
+        }
+
+
     }
 
     private void initializePlayer(){
