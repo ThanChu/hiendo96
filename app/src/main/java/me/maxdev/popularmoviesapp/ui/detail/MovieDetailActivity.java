@@ -137,4 +137,6 @@ public class MovieDetailActivity extends AppCompatActivity {
         return dp * ((float) metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
     }
 
+
+
 }

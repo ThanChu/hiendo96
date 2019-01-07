@@ -21,5 +21,5 @@ public interface TheMovieDbService {
     @GET("search/movie")
     Observable<DiscoverAndSearchResponse<Movie>> searchMovies(@Query("query") String query,
                                                               @Query("page") Integer page);
-
+    
 }
