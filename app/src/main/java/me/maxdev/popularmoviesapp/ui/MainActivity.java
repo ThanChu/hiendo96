@@ -241,6 +241,11 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
                 drawerLayout.closeDrawers();
                 updateTitle();
                 return true;
+            case R.id.drawer_item_logout:
+                Intent refresh = new Intent(this, LoginActivity.class);
+                startActivity(refresh);
+                finish();
+                return true;
             default:
                 return false;
         }

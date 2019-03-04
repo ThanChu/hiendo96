@@ -1,0 +1,52 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">Movies App</string>
+
+    <!-- Actions (menu items, buttons, etc.) and common strings -->
+    <string name="action_settings">Cài đặt</string>
+    <string name="action_sort">Sắp xếp</string>
+    <string name="action_search">Tìm kiếm phim</string>
+    <string name="action_cancel">Hủy bỏ</string>
+
+    <!-- Navigation drawer items -->
+    <string name="navigation_item_explore">Explore</string>
+    <string name="navigation_item_favorites">Yêu thích</string>
+
+    <!-- Movies grid screen -->
+    <string name="movies_grid_no_movies">Không có phim</string>
+
+    <!-- Favorites grid screen -->
+    <string name="favorites_grid_title">Yêu thích</string>
+
+    <!-- Movie detail screen -->
+    <string name="movie_detail_release_date">Ngày công chiếu: %s</string>
+    <string name="movie_detail_overview_title">Tóm tắt phim</string>
+    <string name="movie_detail_videos_title">Các video liên quan</string>
+    <string name="movie_detail_reviews_title">Đánh giá</string>
+
+    <!-- Sort dialog -->
+    <string name="sort_dialog_title">Sắp xếp</string>
+    <string name="sort_dialog_most_popular">Phổ biến</string>
+    <string name="sort_dialog_highest_rated">Điểm cao nhất</string>
+    <string name="sort_dialog_most_rated">Bình chọn nhiều nhất</string>
+
+    <!-- Regular information messages -->
+    <string name="message_added_to_favorites">Thêm vào yêu thích</string>
+    <string name="message_removed_from_favorites">Gỡ bỏ yêu thích</string>
+
+    <!-- Error messages -->
+    <string name="error_failed_to_update_movies">Cập nhật lỗi</string>
+
+    <!-- Content description -->
+    <string name="content_description_movie_poster">Movie poster image</string>
+    <string name="content_description_movie_backdrop">Movie backdrop image</string>
+    <string name="content_description_movie_video">Movie video thumbnail</string>
+    <string name="content_description_no_movies_icon">No movies icon</string>
+
+    <string name="text_phone_number">Số điện thoại</string>
+    <string name="text_password">Mật khẩu</string>
+    <string name="text_login">Đăng nhập</string>
+    <string name="text_logout">Đăng xuất</string>
+    <string name="text_watch_movie">Xem phim</string>
+
+</resources>
