@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -104,10 +105,19 @@ public class MainActivity extends AppCompatActivity implements OnItemSelectedLis
         if (twoPaneMode && selectedMovie == null) {
             movieDetailContainer.setVisibility(View.GONE);
         }
+
         setupToolbar();
         setupNavigationDrawer();
         setupNavigationView();
         setupFab();
+
+        View headerLayout =navigationView.inflateHeaderView(R.layout.drawer_header);
+        TextView tvPhoneNumber = (TextView) headerLayout.findViewById(R.id.tv_phone);
+        Bundle extras = getIntent().getExtras();
+        String phone = "" + extras.getString("phone");
+        if (!"".equals(phone)) {
+            tvPhoneNumber.setText(phone);
+        }
     }
 
     @Override

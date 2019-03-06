@@ -48,5 +48,6 @@
     <string name="text_login">Login</string>
     <string name="text_logout">Logout</string>
     <string name="text_watch_movie">Watch movie</string>
+    <string name="text_message_notice">Phone number or password incorrect!</string>
 
 </resources>

@@ -34,16 +34,19 @@
         </LinearLayout>
 
         <EditText
+            android:id="@+id/edt_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="40dp"
             android:background="@drawable/custom_boder_edittext"
             android:hint="@string/text_phone_number"
             android:inputType="number"
+            android:maxLength="15"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
         <EditText
+            android:id="@+id/edt_pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
@@ -51,6 +54,7 @@
             android:background="@drawable/custom_boder_edittext"
             android:hint="@string/text_password"
             android:inputType="textPassword"
+            android:maxLength="15"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
