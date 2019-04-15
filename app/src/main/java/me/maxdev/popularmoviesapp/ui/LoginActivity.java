@@ -46,17 +46,20 @@ public class LoginActivity extends AppCompatActivity {
             String phone = edtPhone.getText() + "";
             String pass = edtPass.getText() + "";
 
-            if("".equals(phone) || "".equals(pass)){
+            if ("".equals(phone) || "".equals(pass)) {
                 Toast.makeText(this, R.string.text_message_notice, Toast.LENGTH_SHORT).show();
-                return;
+            } else {
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.putExtra("phone", (phone).trim());
+                startActivity(intent);
+                finish();
             }
-
-            Intent intent = new Intent(this, MainActivity.class);
-            intent.putExtra("phone", (phone).trim());
-            startActivity(intent);
-            finish();
         });
 
+    }
+
+    private void showMessage(){
+        runOnUiThread(() -> Toast.makeText(this, R.string.text_message_notice, Toast.LENGTH_SHORT).show());
     }
 
     private void changeLanguage(String language) {

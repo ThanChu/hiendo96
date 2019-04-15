@@ -68,6 +68,9 @@ public class MovieDetailFragment extends RxFragment {
     @BindView(R.id.text_movie_user_rating)
     TextView movieUserRating;
 
+    @BindView(R.id.tv_views)
+    TextView tvViews;
+
     @BindView(R.id.text_movie_release_date)
     TextView movieReleaseDate;
 
@@ -133,7 +136,7 @@ public class MovieDetailFragment extends RxFragment {
     }
 
     @OnClick(R.id.btn_play_movie)
-    public void playMovie(){
+    public void playMovie() {
         Intent intent = new Intent(getContext(), MovieDetailPlayerActivity.class);
         startActivity(intent);
     }
@@ -265,6 +268,8 @@ public class MovieDetailFragment extends RxFragment {
                 movie.getReleaseDate());
         movieReleaseDate.setText(releaseDate);
         movieOverview.setText(movie.getOverview());
+        long views = movie.getVoteCount();
+        tvViews.setText(" " + views + "");
     }
 
     @ColorInt

@@ -49,5 +49,6 @@
     <string name="text_logout">Đăng xuất</string>
     <string name="text_watch_movie">Xem phim</string>
     <string name="text_message_notice">Số điện thoại hoặc mật khẩu không chính xác!</string>
+    <string name="text_views">Lượt xem:</string>
 
 </resources>
